@@ -1,0 +1,89 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f9f9f9;
+    margin: 20px;
+}
+
+h1,
+h2 {
+    text-align: center;
+    color: #333;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin: 0 auto 20px;
+}
+
+.form-control {
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+input,
+select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.error-message {
+    color: red;
+    font-size: 12px;
+    visibility: hidden;
+}
+
+input.error,
+select.error {
+    border-color: red;
+}
+
+button {
+    padding: 10px;
+    background: #a5239b;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+button:hover {
+    background: #832a5f;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    margin-bottom: 20px;
+}
+
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+.status-badge {
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+}
+
+.status-active {
+    background: green;
+}
+
+.status-onleave {
+    background: orange;
+}
+
+.status-terminated {
+    background: red;
+}

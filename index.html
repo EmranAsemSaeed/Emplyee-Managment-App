@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Employee Management App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1>Employee Management Dashboard</h1>
+
+    <form id="employeeForm">
+        <div class="form-control">
+            <input type="text" id="name" placeholder="Employee Name">
+            <small class="error-message"></small>
+        </div>
+
+        <div class="form-control">
+            <input type="text" id="role" placeholder="Role">
+            <small class="error-message"></small>
+        </div>
+
+        <div class="form-control">
+            <select id="status">
+                <option value="">Select Status</option>
+                <option value="Active">Active</option>
+                <option value="On Leave">On Leave</option>
+                <option value="Terminated">Terminated</option>
+            </select>
+            <small class="error-message"></small>
+        </div>
+
+        <button type="submit">Add Employee</button>
+    </form>
+
+    <h2>Employee List</h2>
+    <table id="employeeTable">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Role</th>
+                <th>Status</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <button id="toggleTrash">Show Trash</button>
+
+    <section id="trashSection" style="display:none">
+        <h2>Trash Bin (<span id="trashCount">0</span>)</h2>
+        <table id="trashTable">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Role</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
