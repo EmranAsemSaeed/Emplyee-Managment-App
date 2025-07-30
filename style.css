@@ -2,10 +2,12 @@ body {
     font-family: Arial, sans-serif;
     background: #f9f9f9;
     margin: 20px;
+    line-height: 1.6;
 }
 
 h1,
-h2 {
+h2,
+h3 {
     text-align: center;
     color: #333;
 }
@@ -13,27 +15,33 @@ h2 {
 form {
     display: flex;
     flex-direction: column;
-    width: 300px;
+    max-width: 500px;
     margin: 0 auto 20px;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .form-control {
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     display: flex;
     flex-direction: column;
 }
 
 input,
 select {
-    padding: 8px;
+    padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    font-size: 16px;
 }
 
 .error-message {
     color: red;
     font-size: 12px;
     visibility: hidden;
+    margin-top: 5px;
 }
 
 input.error,
@@ -49,10 +57,60 @@ button {
     cursor: pointer;
     border-radius: 5px;
     margin-top: 10px;
+    font-size: 16px;
+    transition: background 0.3s;
 }
 
 button:hover {
     background: #832a5f;
+}
+
+.controls {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.search-filter {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.range-filter {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.range-filter label {
+    white-space: nowrap;
+}
+
+.payroll-summary {
+    background: #f0f0f0;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 15px;
+}
+
+.payroll-summary h3 {
+    text-align: left;
+    margin-top: 0;
+}
+
+.threshold-delete {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.threshold-delete input {
+    flex: 1;
 }
 
 table {
@@ -60,13 +118,18 @@ table {
     border-collapse: collapse;
     background: white;
     margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 th,
 td {
     border: 1px solid #ddd;
-    padding: 10px;
+    padding: 12px;
     text-align: center;
+}
+
+th {
+    background-color: #f2f2f2;
 }
 
 .status-badge {
@@ -74,6 +137,7 @@ td {
     border-radius: 5px;
     color: white;
     font-weight: bold;
+    display: inline-block;
 }
 
 .status-active {
@@ -86,4 +150,67 @@ td {
 
 .status-terminated {
     background: red;
+}
+
+.high-salary-badge {
+    background: green;
+    color: white;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-size: 12px;
+    margin-left: 5px;
+}
+
+.has-bonus-badge {
+    background: #ff69b4;
+    color: white;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-size: 12px;
+    margin-left: 5px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 300px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: black;
+}
+
+@media (max-width: 768px) {
+    .search-filter {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .range-filter {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 }
